@@ -11,13 +11,16 @@ services:
       POSTGRES_PASSWORD: rebi_password
     ports:
       - "5432:5432"
+    volumes:
+      # Автоматично виконає init.sql при першому запуску бази
+      - ./backend/init.sql:/docker-entrypoint-initdb.d/init.sql
 
   backend:
     build:
       context: ./backend
     container_name: rebi_backend
     ports:
-      - "5000:5000"
+      - "5001:5000"
     depends_on:
       - postgres
 
