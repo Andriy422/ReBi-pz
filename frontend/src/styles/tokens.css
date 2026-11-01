@@ -1,0 +1,36 @@
+/* Дизайн-токени ReBi (значення з UI-кіта у Figma) */
+:root {
+  /* Кольори */
+  --primary: #ff6b1a;
+  --primary-300: #ff9e59;
+  --primary-50: #fff1e6;
+  --text: #1a140f;
+  --muted: #6b5e54;
+  --line: #ede3d9;
+  --bg: #fcf9f5;
+  --white: #ffffff;
+  --success: #2eb366;
+  --error: #d93333;
+
+  /* Шрифт */
+  --font: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* Радіуси */
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+
+  /* Відступи */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  /* Контейнер сторінки */
+  --container: 1280px;
+  --page-padding: 48px;
+}
