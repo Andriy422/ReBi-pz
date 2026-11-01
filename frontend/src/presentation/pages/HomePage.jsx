@@ -1,6 +1,8 @@
 import Header from '../components/Header'
 import Hero from '../components/Hero'
-import AvailableVehicles from '../components/AvailableVehicles'
+import PopularModels from '../components/PopularModels'
+import WhyUs from '../components/WhyUs'
+import HowItWorks from '../components/HowItWorks'
 
 export default function HomePage() {
   return (
@@ -9,7 +11,9 @@ export default function HomePage() {
         <Header dark />
         <Hero />
       </div>
-      <AvailableVehicles />
+      <PopularModels />
+      <WhyUs />
+      <HowItWorks />
     </>
   )
 }

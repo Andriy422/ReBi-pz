@@ -1,5 +1,5 @@
 // DOMAIN: сутність «Транспорт». Нічого не знає про Express, Postgres чи HTTP.
-const VEHICLE_TYPES = ['bike', 'moped'];
+const VEHICLE_TYPES = ['bike', 'moped', 'scooter'];
 const VEHICLE_STATUSES = ['available', 'rented', 'booked', 'maintenance', 'retired'];
 
 class Vehicle {

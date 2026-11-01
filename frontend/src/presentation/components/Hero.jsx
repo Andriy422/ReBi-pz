@@ -14,7 +14,7 @@ export default function Hero() {
         Електротранспорт для твоїх пригод <span>у Львові</span>
       </h1>
       <p className="hero__subtitle">
-        Орендуй електровелосипед або електромопед — швидко, зручно, вигідно.
+        Орендуй електровелосипед, електросамокат або електромопед — швидко, зручно, вигідно.
       </p>
 
       <form className="search" onSubmit={(e) => e.preventDefault()}>
@@ -23,6 +23,7 @@ export default function Hero() {
           <select defaultValue="bike">
             <option value="bike">Велосипед</option>
             <option value="moped">Мопед</option>
+            <option value="scooter">Самокат</option>
           </select>
         </label>
         <label className="search__field">

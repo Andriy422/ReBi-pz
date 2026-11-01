@@ -1,0 +1,32 @@
+.why__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+.why__card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+}
+.why__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  color: var(--white);
+  background: var(--primary);
+  border-radius: var(--radius-md);
+}
+.why__card h3 {
+  font-size: 17px;
+  font-weight: 700;
+}
+.why__card p {
+  font-size: 14px;
+  color: var(--muted);
+}
