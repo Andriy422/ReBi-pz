@@ -1,3 +1,4 @@
+-- SQLBook: Code
 -- ReBi: міграція 003 (виконується після 002_vehicles_moderation.sql)
 -- Припущення: users(id BIGINT) та vehicles(id BIGINT) вже створені (vehicles див. у 002).
 -- Якщо у вас UUID, замініть BIGINT на UUID у зовнішніх ключах.
