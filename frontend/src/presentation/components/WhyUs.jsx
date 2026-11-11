@@ -9,7 +9,7 @@ const items = [
 
 export default function WhyUs() {
   return (
-    <section className="section">
+    <section id="about" className="section">
       <header className="section__head">
         <h2>Чому саме ми</h2>
         <p>Надійний транспорт і чесні ціни</p>

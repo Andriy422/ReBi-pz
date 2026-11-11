@@ -24,7 +24,7 @@ export default function PopularModels() {
   const { models, loading, error } = usePopularModels(3)
 
   return (
-    <section className="section popular">
+    <section id="catalog" className="section popular">
       <header className="section__head">
         <h2>Популярні моделі</h2>
         <p>Обирай свій ідеальний транспорт</p>

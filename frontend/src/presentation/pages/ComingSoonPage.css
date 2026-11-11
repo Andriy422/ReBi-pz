@@ -1,0 +1,21 @@
+.soon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  min-height: 50vh;
+  padding: 96px var(--page-padding);
+  text-align: center;
+}
+.soon h1 {
+  font-size: 34px;
+  font-weight: 700;
+}
+.soon p {
+  color: var(--muted);
+}
+.soon__link {
+  margin-top: 8px;
+  font-weight: 600;
+  color: var(--primary);
+}
