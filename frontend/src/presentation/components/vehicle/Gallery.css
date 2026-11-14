@@ -1,0 +1,34 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.gallery__main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 380px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary);
+  background: var(--primary-50);
+  border-radius: var(--radius-lg);
+}
+.gallery__thumbs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.gallery__thumbs button {
+  height: 90px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--primary);
+  cursor: pointer;
+  background: var(--primary-50);
+  border: 2px solid transparent;
+  border-radius: var(--radius-md);
+}
+.gallery__thumbs button.is-active {
+  border-color: var(--primary);
+}

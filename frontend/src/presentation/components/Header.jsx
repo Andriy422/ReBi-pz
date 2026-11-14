@@ -4,7 +4,7 @@ import { useAuth } from '../hooks/useAuth'
 import './Header.css'
 
 const links = [
-  { label: 'Каталог', to: '/#catalog' },
+  { label: 'Каталог', to: '/catalog' },
   { label: 'Тарифи', to: '/#tariffs' },
   { label: 'Карта', to: '/#map' },
   { label: 'Про нас', to: '/#about' },

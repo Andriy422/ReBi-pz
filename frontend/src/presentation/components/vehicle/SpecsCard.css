@@ -1,0 +1,30 @@
+.specs {
+  padding: 16px 20px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+}
+.specs h2 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.specs dl {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+}
+.specs dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 14px;
+}
+.specs dt {
+  color: var(--muted);
+}
+.specs dd {
+  margin: 0;
+  font-weight: 600;
+}

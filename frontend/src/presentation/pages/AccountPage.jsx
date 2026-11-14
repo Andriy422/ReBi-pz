@@ -1,7 +1,9 @@
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Header from '../components/Header'
 import Button from '../components/Button'
 import { useAuth } from '../hooks/useAuth'
+import { useMyBookings } from '../hooks/useBookings'
+import { formatDateTime } from '../utils/datetime'
 import './AccountPage.css'
 
 const menu = [
@@ -15,6 +17,7 @@ const menu = [
 
 export default function AccountPage() {
   const { user, signOut } = useAuth()
+  const { bookings, loading } = useMyBookings()
   const navigate = useNavigate()
 
   const handleSignOut = async () => {
@@ -51,20 +54,36 @@ export default function AccountPage() {
         <section className="account__main">
           <h1>Активні бронювання</h1>
 
-          <article className="booking">
-            <div className="booking__photo">фото</div>
-            <div className="booking__info">
-              <h2>Електровелосипед Rider X1</h2>
-              <p>Центр, вул. Староєврейська, 12</p>
-              <strong>Залишилось: 5:30:17</strong>
-            </div>
-            <div className="booking__actions">
-              <Button>Продовжити оренду</Button>
-              <Button variant="secondary">Підтримка</Button>
-            </div>
-          </article>
+          {loading && <p>Завантаження…</p>}
 
-          <p className="account__demo">Демо-дані: справжні бронювання зʼявляться після підключення бекенда</p>
+          {!loading && bookings.length === 0 && (
+            <div className="account__empty">
+              <h2>У вас поки немає бронювань</h2>
+              <p>Оберіть транспорт у каталозі й забронюйте його.</p>
+              <Button to="/catalog">До каталогу</Button>
+            </div>
+          )}
+
+          {bookings.map((b) => (
+            <article key={b.id} className="booking">
+              <div className="booking__photo">фото</div>
+              <div className="booking__info">
+                <h2>{b.modelName}</h2>
+                <p>{b.location}</p>
+                <p>
+                  {formatDateTime(b.start)} — {formatDateTime(b.end)}
+                </p>
+                <strong>{b.quote.total} грн · Підтверджено</strong>
+              </div>
+              <div className="booking__actions">
+                <Link className="btn btn--primary" to={`/booking/${b.id}`}>
+                  Деталі
+                </Link>
+              </div>
+            </article>
+          ))}
+
+          <p className="account__demo">Демо-дані: бронювання зберігаються лише у вашому браузері</p>
         </section>
       </div>
     </>

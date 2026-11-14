@@ -1,0 +1,119 @@
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 22px;
+  align-self: start;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+}
+.filters__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.filters__head h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.filters__reset,
+.filters__more {
+  padding: 0;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: left;
+  color: var(--primary);
+  cursor: pointer;
+  background: none;
+  border: 0;
+}
+.fgroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+.fgroup h3 {
+  font-size: 14px;
+  font-weight: 700;
+}
+.check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.check input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary);
+  cursor: pointer;
+}
+.finput {
+  width: 100%;
+  min-width: 0;
+  padding: 10px 12px;
+  font-size: 13px;
+  color: var(--text);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  outline: 0;
+}
+.finput:focus {
+  border-color: var(--primary);
+}
+.fprice {
+  display: flex;
+  gap: 8px;
+}
+.fchips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.fchip {
+  padding: 7px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+}
+.fchip.is-active {
+  color: var(--white);
+  background: var(--primary);
+  border-color: var(--primary);
+}
+.fgroup input[type='range'] {
+  width: 100%;
+  accent-color: var(--primary);
+}
+.filters__hint {
+  font-size: 12px;
+  color: var(--muted);
+}
+.filters__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+.filters__actions .btn {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .filters {
+    display: none;
+  }
+  .filters.is-open {
+    display: flex;
+  }
+}

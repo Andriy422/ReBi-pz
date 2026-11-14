@@ -1,3 +1,5 @@
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Button from './Button'
 import './Hero.css'
 
@@ -8,6 +10,14 @@ const benefits = [
 ]
 
 export default function Hero() {
+  const navigate = useNavigate()
+  const [type, setType] = useState('bike')
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    navigate(`/catalog?type=${type}`)
+  }
+
   return (
     <section className="hero">
       <h1 className="hero__title">
@@ -17,10 +27,10 @@ export default function Hero() {
         Орендуй електровелосипед, електросамокат або електромопед — швидко, зручно, вигідно.
       </p>
 
-      <form className="search" onSubmit={(e) => e.preventDefault()}>
+      <form className="search" onSubmit={handleSubmit}>
         <label className="search__field">
           <span>Що орендувати?</span>
-          <select defaultValue="bike">
+          <select value={type} onChange={(e) => setType(e.target.value)}>
             <option value="bike">Велосипед</option>
             <option value="moped">Мопед</option>
             <option value="scooter">Самокат</option>

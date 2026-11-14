@@ -1,0 +1,77 @@
+.bform {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  background: var(--primary-50);
+  border-radius: var(--radius-lg);
+}
+.bform h2 {
+  font-size: 16px;
+  font-weight: 700;
+}
+.bform__field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px 14px;
+  background: var(--white);
+  border-radius: var(--radius-sm);
+}
+.bform__field span {
+  font-size: 12px;
+  color: var(--muted);
+}
+.bform__field input,
+.bform__field select {
+  padding: 0;
+  font-size: 14px;
+  color: var(--text);
+  background: transparent;
+  border: 0;
+  outline: 0;
+}
+.bform__acc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.bform__acc button {
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--primary);
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid var(--primary);
+  border-radius: 20px;
+}
+.bform__acc button.is-active {
+  color: var(--white);
+  background: var(--primary);
+}
+.bform__sum {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.bform__sum p {
+  font-size: 13px;
+  color: var(--muted);
+}
+.bform__sum strong {
+  font-size: 20px;
+  white-space: nowrap;
+}
+.bform__error {
+  font-size: 13px;
+  color: var(--error);
+}
+.bform__note {
+  font-size: 11px;
+  color: var(--muted);
+}
+.bform .btn {
+  width: 100%;
+}

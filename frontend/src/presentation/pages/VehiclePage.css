@@ -1,0 +1,71 @@
+.vehicle {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 16px var(--page-padding) 56px;
+}
+.vehicle__crumbs {
+  margin-bottom: 20px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.vehicle__crumbs a {
+  color: var(--primary);
+  font-weight: 600;
+}
+.vehicle__note--error {
+  color: var(--error);
+}
+.vehicle__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 64px 16px;
+}
+.vehicle__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+.vehicle__info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.vehicle__type {
+  font-size: 14px;
+  color: var(--muted);
+}
+.vehicle__info h1 {
+  font-size: 36px;
+  font-weight: 700;
+}
+.vehicle__price {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--primary);
+}
+.vehicle__req {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 40px;
+}
+.vehicle__req h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.vehicle__req p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+@media (max-width: 900px) {
+  .vehicle__grid {
+    grid-template-columns: 1fr;
+  }
+  .vehicle__info h1 {
+    font-size: 28px;
+  }
+}
